@@ -30,6 +30,9 @@
     --text-font: 'Space Grotesk', sans-serif;
 
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background-color: var(--bg-color); /* Fondo oscuro gamer */
@@ -37,6 +40,9 @@ body {
     font-family: var(--title-font); /* Texto base super moderno */
     font-size: 15px;
     line-height: 1.6;
+}
+section { 
+    scroll-margin-top: 95px;
 }
 
 a {
@@ -65,6 +71,7 @@ strong{
 
 .game-index-header
 {
+    scroll-margin-top: 95px;
     font-size: 24px;
     text-align: center;
 }
@@ -98,6 +105,7 @@ strong{
 
 .primer-bloque
 {
+    scroll-margin-top: 95px;
     background: linear-gradient(135deg, var(--card-bg-color) 0%, var(--card-bg-color-dark) 100%);
     padding: 2.5rem;
     border-radius: 12px;
@@ -127,6 +135,7 @@ video
 
 .conclusion-card
 {
+    scroll-margin-top: 95px;
     background-color: var(--bg-color-dark); /* For browsers that do not support gradients */
     background-image: linear-gradient(to top, var(--card-bg-color), var(--card-bg-color-dark) 50%);
     color: var(--paragraph-color);
@@ -253,6 +262,7 @@ video
    ========================================================================== */
 
 .audio-card {
+    scroll-margin-top: 95px;
     background-color: var(--card-bg-color-dark);
     background-image: linear-gradient(to right, var(--card-bg-color-dark), var(--card-bg-color));
     border: 1px solid var(--border-color-dark);
@@ -300,6 +310,30 @@ video
     margin-top: 4rem;
     font-size: 0.85rem;
     color: var(--paragraph-color);
+}
+
+/* Botón flotante para volver arriba */
+.btn-subir {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 48px;
+    height: 48px;
+    background-color: var(--accent-color);
+    color: var(--text-color-dark);
+    font-weight: 900;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 200;
+}
+
+.btn-subir:hover {
+    transform: translateY(-4px);
+    background-color: var(--link-color);
 }
 
 /* ==========================================================================
