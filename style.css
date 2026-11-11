@@ -1,0 +1,339 @@
+/* ==========================================================================
+   1. RESET Y CONFIGURACIÓN GENERAL (Con nuevas fuentes)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --border-color: #e2e8f0;
+    --border-color-dark: #312e81;
+
+    --text-color-bright: #e2e8f0;
+    --text-highlight-color-light: #FE0;
+    --paragraph-color: #9ca3af;
+    --text-color-dark: #000;
+    --text-higlight-color-dark: #430;
+
+    --link-color: #ffffff;
+    --link-highlight-color: #DA0;
+
+    --bg-color: #0b0f19;
+    --bg-color-dark: #090d16;
+    --card-bg-color: #1e1b4b;
+    --card-bg-color-dark: #111827;
+
+    --accent-color: #FD0;
+
+    --title-font: 'Space Grotesk', sans-serif;
+    --header-font: 'Orbitron', sans-serif;
+    --text-font: 'Space Grotesk', sans-serif;
+
+}
+
+body {
+    background-color: var(--bg-color); /* Fondo oscuro gamer */
+    color: var(--text-color-bright);
+    font-family: var(--title-font); /* Texto base super moderno */
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.AudioTrack{
+    margin: 1.5rem;
+}
+
+strong{
+    color: var(--text-color-bright);
+}
+
+.card-text
+{
+    padding: 1.5rem;
+}
+
+.hidden-img
+{
+    display: none;
+}
+
+.game-index-header
+{
+    font-size: 24px;
+    text-align: center;
+}
+
+.game-index
+{
+    display: grid;
+    grid-template-columns: repeat(5,0.2fr);
+    margin: 2.3rem;
+}
+
+.game-element
+{
+    font-size: 12px;
+    color: var(--paragraph-color);
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.game-element img
+{
+    width: 100%;
+    border-radius: 12px;
+}
+
+.game-element:hover img
+{
+    transform: scale(1.05);
+    border: 2px solid var(--border-color);
+}
+
+.primer-bloque
+{
+    background: linear-gradient(135deg, var(--card-bg-color) 0%, var(--card-bg-color-dark) 100%);
+    padding: 2.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color-dark);
+}
+
+.primer-bloque h1, h2
+{
+    font-family: var(--header-font);
+    font-weight: 800;
+    color: var(--text-color-bright);
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+.primer-bloque h1 {font-size: 2.3rem;}
+.primer-bloque h2 {font-size: 1.8rem;}
+
+video
+{
+    margin: 2rem;
+    width: 70%;
+    border-radius: 0.2rem;
+    align-self: center;
+}
+
+.conclusion-card
+{
+    background-color: var(--bg-color-dark); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to top, var(--card-bg-color), var(--card-bg-color-dark) 50%);
+    color: var(--paragraph-color);
+    border: 1px solid var(--border-color-dark);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    margin: 2rem 0px;
+}
+.conclusion-card h2
+{
+    color: var(--text-color-bright);
+}
+
+.link
+{
+    text-align: center;
+}
+.link a
+{
+    color: var(--link-color);
+}
+.link a:hover
+{
+    color: var(--link-highlight-color);
+}
+
+/* ==========================================================================
+   2. CABECERA (HEADER)
+   ========================================================================== */
+.main-header {
+    background-color: var(--card-bg-color);
+    border-bottom: 2px solid var(--border-color-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: var(--header-font); /* Logotipo futurista */
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-style: italic;
+    color: var(--text-color-bright);
+}
+
+.accent
+{
+    color: var(--accent-color);
+}
+
+/* ==========================================================================
+   3. ESTRUCTURA PRINCIPAL (LAYOUT DE DOS COLUMNAS)
+   ========================================================================== */
+.main-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 2%;
+    gap: 2rem;
+}
+
+/* Menú Lateral */
+.sidebar-categories {
+    flex: 0 0 250px;
+    background-color: var(--card-bg-color-dark);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color-dark);
+    height: fit-content;
+}
+
+.sidebar-categories h2 {
+    font-family: var(--header-font);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sidebar-categories ul {
+    list-style: none;
+}
+
+.sidebar-categories li {
+    margin-bottom: 0.8rem;
+}
+
+.sidebar-categories a {
+    display: block;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    color: var(--link-color);
+    font-weight: 500;
+}
+
+.sidebar-categories a:hover, .sidebar-categories a.active-cat {
+    background-color: var(--bg-color);
+    color: var(--link-highlight-color);
+    border-left: 4px solid var(--border-color-dark);
+    padding-left: 0.6rem;
+}
+
+/* Zona de Contenido */
+.content-area {
+    flex: 1;
+}
+
+/* ==========================================================================
+   5. TARJETAS DE AUDIO (CSS GRID)
+   ========================================================================== */
+
+.audio-card {
+    background-color: var(--card-bg-color-dark);
+    background-image: linear-gradient(to right, var(--card-bg-color-dark), var(--card-bg-color));
+    border: 1px solid var(--border-color-dark);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    margin: 2rem 0px;
+}
+
+
+.audio-card h3
+{
+    font-size: 24px;
+    font-family: var(--title-font);
+}
+
+.card-description {
+    font-size: 0.9rem;
+    color: var(--paragraph-color);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+/* Contenedor del reproductor */
+.audio-player-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.audio-player-wrapper audio {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+}
+/* ==========================================================================
+   6. PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+.main-footer {
+    background-color: var(--bg-color-dark);
+    border-top: 1px solid var(--border-color-dark);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 4rem;
+    font-size: 0.85rem;
+    color: var(--paragraph-color);
+}
+
+/* ==========================================================================
+   7. ADAPTACIÓN A MÓVILES (RESPONSIVE)
+   ========================================================================== */
+@media (max-width: 1200px) {
+    
+    .normal-img {
+        display: none;
+    }
+
+    .hidden-img{
+        display: block;
+    }
+    .game-index
+    {
+        grid-template-columns: repeat(3,0.33fr);
+    }
+}
+@media (max-width: 900px) {
+    .game-index
+    {
+        grid-template-columns: repeat(2,0.5fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+    
+    .sidebar-categories {
+        flex: none;
+        width: 100%;
+    }
+    
+    .main-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
